@@ -1,0 +1,44 @@
+/*** ===================================================================================== ***/
+/*** YOUR REPORT STYLE GOES HERE ***/
+/*** ===================================================================================== ***/
+#gage_data {
+    border-collapse: collapse;
+    width: 100%;
+	margin-bottom: 100px;
+	font-size: 1.0em;
+}
+#gage_data th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: darkblue;
+    color: white;
+	border: 1px solid #ddd;
+	padding: 5px;
+	text-align: center;
+	font-size: 1.0em;
+}
+#gage_data td a {
+	text-decoration: none;
+}
+#gage_data th a {
+	color: black;
+	text-decoration: none;
+}
+#gage_data td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+}
+#gage_data td a:hover, #gage_data th a:hover {
+	text-decoration: underline;
+}
+#gage_data tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+#gage_data tr:hover {background-color: #ddd;}
+
+hr {
+	border: none; /* Remove any default border */
+  	border-top: 1px solid #000; /* Set the top border to be 1 pixel thick and black */
+}
