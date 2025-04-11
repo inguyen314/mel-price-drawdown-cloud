@@ -592,10 +592,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         const plainTextBody = combinedHtml.replace(/<br\s*\/?>/gi, '\r\n');
     
         // Set the recipient email address
-        const to = 'ivan.h.nguyen@usace.army.mil';
+        // const to = 'ivan.h.nguyen@usace.army.mil';
     
         // Optional: multiple recipients
-        // const to = 'ivan.h.nguyen@usace.army.mil;allen.phillips@usace.army.mil;DLL-CEMVS-WATER-MANAGERS@usace.army.mil;dll-cemvk-blakely-senior-controllers@usace.army.mil;resources@swpa.gov;larry.j.hurt@usace.army.mil;michael.d.tate@usace.army.mil';
+        const to = 'DLL-CEMVS-NNP@usace.army.mil;DLL-CEMVS-WATER-MANAGERS@usace.army.mil;andrew.c.schimpf@usace.army.mil;bernard.heroff@adm.com';
     
         // Create a mailto link
         const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainTextBody)}`;
