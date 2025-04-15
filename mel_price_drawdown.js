@@ -436,8 +436,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 const span = document.createElement("span");
 
                 if (locationId === "Mel Price Pool-Mississippi") {
-                    span.textContent = `This morning: ${publicName} ${stageTime} =  ${stageValue} (ft) ${logTheLocation}`;
-                    stageText = `This morning: ${publicName} ${stageTime} =  ${stageValue} (ft) ${logTheLocation}`;
+                    span.innerHTML = `This morning: <br> ${stageTime}, ${stageValue} (ft) ${logTheLocation}`;
+                    stageText = `This morning:\n ${stageTime},  ${stageValue} (ft) ${logTheLocation}`;
                     // paragraphsData.push(stageText);
                 }
                 // Append the span to the container
@@ -585,7 +585,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const formattedDate = currentDate.toLocaleDateString('en-US', options);
     
         // Create the email subject
-        const subject = `Mel Price LD Drawdown ${formattedDate} Alert`;
+        const subject = `Melvin Price L&D Drawdown Alert`;
     
         // Combine stageText and netmissText, then convert <br> to line breaks for mailto
         const combinedHtml = `${stageText}<br><br>${netmissText}`;
