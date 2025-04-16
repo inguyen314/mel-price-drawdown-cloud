@@ -595,7 +595,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         // const to = 'ivan.h.nguyen@usace.army.mil';
 
         // Optional: multiple recipients
-        const to = 'andrew.c.schimpf@usace.army.mil;bernard.heroff@adm.com;cheatoc@gmail.com;dll-cemvs-pa@usace.army.mil;dll-cemvs-water-managers@usace.army.mil;DLL-CEMVS-NNP@usace.army.mil;editor@rivercountynews.com;eades473@msn.com;eturbinemike@aol.com;gbrown@altonmarina.com;graftonriveradventures@gmail.com;jbutler@altonmarina.com;max5032000@yahoo.com;mikerodgers@carrolltonbanking.com;oneofallen@yahoo.com;rhonk@altonmarina.com;riverbill@prodigy.net;sarba64076@aol.com;sarah.b.miller@usace.army.mil;susanefill@yahoo.com;thelongshotmarina@gmail.com';
+        const to = 'andrew.c.schimpf@usace.army.mil;bernard.heroff@adm.com;cheatoc@gmail.com;dll-cemvs-pa@usace.army.mil;dll-cemvs-water-managers@usace.army.mil;editor@rivercountynews.com;eades473@msn.com;eturbinemike@aol.com;gbrown@altonmarina.com;graftonriveradventures@gmail.com;jbutler@altonmarina.com;max5032000@yahoo.com;mikerodgers@carrolltonbanking.com;oneofallen@yahoo.com;rhonk@altonmarina.com;riverbill@prodigy.net;sarba64076@aol.com;sarah.b.miller@usace.army.mil;susanefill@yahoo.com;thelongshotmarina@gmail.com';
 
         // Create a mailto link
         const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainTextBody)}`;
