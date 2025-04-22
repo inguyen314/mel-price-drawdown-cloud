@@ -583,24 +583,27 @@ document.addEventListener("DOMContentLoaded", async function () {
         const currentDate = new Date();
         const options = { month: '2-digit', day: '2-digit', year: 'numeric' };
         const formattedDate = currentDate.toLocaleDateString('en-US', options);
-
+    
         // Create the email subject
         const subject = `Melvin Price L&D Drawdown Alert`;
-
+    
         // Combine stageText and netmissText, then convert <br> to line breaks for mailto
         const combinedHtml = `${stageText}<br><br>${netmissText}`;
         const plainTextBody = combinedHtml.replace(/<br\s*\/?>/gi, '\r\n');
-
-        // Set the recipient email address
-        // const to = 'ivan.h.nguyen@usace.army.mil';
-
-        // Optional: multiple recipients
-        const to = 'andrew.c.schimpf@usace.army.mil;bernard.heroff@adm.com;cheatoc@gmail.com;dll-cemvs-pa@usace.army.mil;dll-cemvs-water-managers@usace.army.mil;editor@rivercountynews.com;eades473@msn.com;eturbinemike@aol.com;gbrown@altonmarina.com;graftonriveradventures@gmail.com;jbutler@altonmarina.com;max5032000@yahoo.com;mikerodgers@carrolltonbanking.com;oneofallen@yahoo.com;rhonk@altonmarina.com;riverbill@prodigy.net;sarba64076@aol.com;sarah.b.miller@usace.army.mil;susanefill@yahoo.com;thelongshotmarina@gmail.com';
-
-        // Create a mailto link
-        const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainTextBody)}`;
-
+    
+        // Define recipients
+        const to = 'dll-cemvs-water-managers@usace.army.mil';
+        const cc = 'dll-cemvs-pa@usace.army.mil';
+        const bcc = 'andrew.c.schimpf@usace.army.mil;bernard.heroff@adm.com;cheatoc@gmail.com;dustin.hanson@adm.com;editor@rivercountynews.com;eades473@msn.com;eturbinemike@aol.com;gbrown@altonmarina.com;graftonriveradventures@gmail.com;jbutler@altonmarina.com;max5032000@yahoo.com;mikerodgers@carrolltonbanking.com;oneofallen@yahoo.com;rhonke@altonmarina.com;riverbill@prodigy.net;sarba64076@aol.com;sarah.b.miller@usace.army.mil;susanefill@yahoo.com;thelongshotmarina@gmail.com';
+    
+        // Construct the mailto link
+        const mailtoLink = `mailto:${encodeURIComponent(to)}`
+            + `?cc=${encodeURIComponent(cc)}`
+            + `&bcc=${encodeURIComponent(bcc)}`
+            + `&subject=${encodeURIComponent(subject)}`
+            + `&body=${encodeURIComponent(plainTextBody)}`;
+    
         // Open the mailto link in the default email client
         window.location.href = mailtoLink;
-    }
+    }    
 });
