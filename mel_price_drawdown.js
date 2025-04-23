@@ -591,19 +591,38 @@ document.addEventListener("DOMContentLoaded", async function () {
         const combinedHtml = `${stageText}<br><br>${netmissText}`;
         const plainTextBody = combinedHtml.replace(/<br\s*\/?>/gi, '\r\n');
     
-        // Define recipients
-        const to = 'dll-cemvs-water-managers@usace.army.mil';
-        const cc = 'dll-cemvs-pa@usace.army.mil';
-        const bcc = 'andrew.c.schimpf@usace.army.mil;bernard.heroff@adm.com;cheatoc@gmail.com;dustin.hanson@adm.com;editor@rivercountynews.com;eades473@msn.com;eturbinemike@aol.com;gbrown@altonmarina.com;graftonriveradventures@gmail.com;jbutler@altonmarina.com;max5032000@yahoo.com;mikerodgers@carrolltonbanking.com;oneofallen@yahoo.com;rhonke@altonmarina.com;riverbill@prodigy.net;sarba64076@aol.com;sarah.b.miller@usace.army.mil;susanefill@yahoo.com;thelongshotmarina@gmail.com';
+        // Define all emails as BCC
+        const bcc = [
+            'dll-cemvs-water-managers@usace.army.mil',
+            'dll-cemvs-pa@usace.army.mil',
+            'andrew.c.schimpf@usace.army.mil',
+            'bernard.heroff@adm.com',
+            'cheatoc@gmail.com',
+            'dustin.hanson@adm.com',
+            'editor@rivercountynews.com',
+            'eades473@msn.com',
+            'eturbinemike@aol.com',
+            'gbrown@altonmarina.com',
+            'graftonriveradventures@gmail.com',
+            'jbutler@altonmarina.com',
+            'max5032000@yahoo.com',
+            'mikerodgers@carrolltonbanking.com',
+            'oneofallen@yahoo.com',
+            'rhonke@altonmarina.com',
+            'riverbill@prodigy.net',
+            'sarba64076@aol.com',
+            'sarah.b.miller@usace.army.mil',
+            'susanefill@yahoo.com',
+            'thelongshotmarina@gmail.com'
+        ].join(',');
     
-        // Construct the mailto link
-        const mailtoLink = `mailto:${encodeURIComponent(to)}`
-            + `?cc=${encodeURIComponent(cc)}`
-            + `&bcc=${encodeURIComponent(bcc)}`
+        // Construct the mailto link with empty to/cc and all emails in bcc
+        const mailtoLink = `mailto:`
+            + `?bcc=${encodeURIComponent(bcc)}`
             + `&subject=${encodeURIComponent(subject)}`
             + `&body=${encodeURIComponent(plainTextBody)}`;
     
         // Open the mailto link in the default email client
         window.location.href = mailtoLink;
-    }    
+    }       
 });
