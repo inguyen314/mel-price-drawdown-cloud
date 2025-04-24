@@ -614,8 +614,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             'sarah.b.miller@usace.army.mil',
             'susanefill@yahoo.com',
             'thelongshotmarina@gmail.com'
-        ].join(',');
-    
+        ].join(';');
+        
         // Construct the mailto link with empty to/cc and all emails in bcc
         const mailtoLink = `mailto:`
             + `?bcc=${encodeURIComponent(bcc)}`
